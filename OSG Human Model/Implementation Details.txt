@@ -1,0 +1,15 @@
+-> Exercise 1
+	Implemented a sample program to understand matrix transformations.
+	
+-> Exercise 2
+	Implemented a sample program to understand event handling.
+	
+-> Assignment 1
+	* Have defined a virtual class called MyBodyPart which inherits from GUIEventHandler giving it event handling capabilities. 
+	* The handle() method is made pure virtual.
+	* All the body parts inherit from MyBodyPart and define their own handle() methods. 
+	* The MyBodyPart class has a group object, MatrixTransform object, a ShapeDrawable object and a Geode.
+	* Keys 0-9 select a body part each. 
+	* Once a body part is selected, the arrow keys & shift+arrow keys help moving the part in the three dimensions. 
+	* Not all limbs move in all the three dimensions. The lower arm and the lower legs move in only one dimension. 
+	

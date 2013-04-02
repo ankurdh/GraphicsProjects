@@ -1,0 +1,31 @@
+1. The paths for VLD include/library directories should be in configured in the project. Huge datastructues and pointers are used in the code. Thus, the vld.h was included.
+2. The $(ProjectDir) should be included in the additional include paths to find:
+	-> Grid.h
+	-> Grid.cpp
+	-> SpacebarHelper.h
+	-> DisplayListHelper.h
+	-> DisplayListHelper.cpp
+
+3. Right clicks will highlight a Grid cell in Magenta. On the second right click, the intersected cells of the parallelogram edges will be drawn. The cells drawn in red are the ones those are calculated, and the ones in blue are the ones which were calculated by the fact that the parallelogram edges are symmetrical. 
+4. Right clicking three times will reset the scene and the user can do a new operation.
+5. Hitting spacebar thrice will also reset the scene and the user can do a new operation after that. 
+
+
+NOTE: 
+1. There was a bug in calculation of the dot product of a disc, with a parallelogram edge. The dot product was not returning proper values. Even after lot of debugging, I couldn't figure out the cause of the bug. Hence, if a green disc is intersecting a parallelogram vertex from outside it, it will not be highlighted. However, all the discs intersecting/touching the edges are being calculated properly. 
+2. Only minor tests were done to break the code and were corrected. Cases like right clicking on the same cell twice, right clicking on two cells with same 'x' or 'y' will give wrong results since the slope of '0' or infinity results. 
+3. The code can still be highly refactored. 
+	->The grid class is very big and could be broken into a helper class which would do all the math. 
+	->Variable names can be changed to names which make more logical sense. 
+	->Data structures for Vectors & Edges could be created for a more cleaner code. This would also clean the Grid class of methods those don't fit into it.
+	->Code lacks documentation at a large level. Minor and one line comments are given. 
+	->Simple things like divide by zero checks, datatype overflow checks etc. could be put to make the code more robust. 
+	->More methods, which are not required to be called by an object could be made private. Un-necessary & not required functionality is exposed!
+	->Several values are hardcoded, whereas they could be #defined. 
+
+-----------------------------------------------------------------------------------------------------------------------
+KEYNOTE:
+-----------------------------------------------------------------------------------------------------------------------
+Although, a lot could be optimized and cleaned, the code written implements the algorithm, highlights grid cells,
+calculates disc-parallelogram intersections. The basic idea of the assignment is accomplished. 
+

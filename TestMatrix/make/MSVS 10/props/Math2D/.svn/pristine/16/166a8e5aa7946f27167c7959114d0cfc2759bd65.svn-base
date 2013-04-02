@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CompilerName>MSVS 10</CompilerName>
+    <MATH2D_INC_DIR>$(MATH2D_DIR)\include</MATH2D_INC_DIR>
+    <MATH2D_LIB_DIR>$(MATH2D_DIR)\lib\$(CompilerName)\$(Platform)\$(Configuration)</MATH2D_LIB_DIR>
+    <MATH2D_BIN_DIR>$(MATH2D_DIR)\bin\$(CompilerName)\$(Platform)\$(Configuration)</MATH2D_BIN_DIR>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MATH2D_INC_DIR)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="CompilerName">
+      <Value>$(CompilerName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="MATH2D_INC_DIR">
+      <Value>$(MATH2D_INC_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="MATH2D_LIB_DIR">
+      <Value>$(MATH2D_LIB_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="MATH2D_BIN_DIR">
+      <Value>$(MATH2D_BIN_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

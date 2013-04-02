@@ -1,0 +1,9 @@
+1. The files SphereHelper.cpp and SphereHelper.h are custom files and should be added to the project before running it. 
+	Right Click on project -> Add -> Existing Item -> SphereHelper.[cpp/h]
+	
+2. Dragging the mouse with the left button pressed will rotate the scene.
+3. Dragging the mouse with the right button pressed will zoom in and zoom out the scene.
+4. The number keys 1, 2, 3, 4 toggle lights 1, 2, 3, 4 on/off respectively.
+5. Keys 'a', 'd' rotate the scene horizontally.
+6. Keys 's', 'w' rotate the scene vertically.
+7. The console shows the status of the lights. 
